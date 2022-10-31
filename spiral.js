@@ -11,7 +11,6 @@ const Spiral = (()=>{
         for (let i = 0; Math.abs(i) < Math.abs(MouseListener.angleToMouse); i += MouseListener.angleToMouse / Settings.partCnt ) {
             phi.push(i * Settings.turningSpeed)
         }
-        console.log(phi)
         ctx.moveTo(midx, midy)
         ctx.beginPath()
         phi.forEach((p, i)=>{

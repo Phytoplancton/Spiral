@@ -1,6 +1,7 @@
 
+document.body.style.backgroundColor = Settings.canvasColor;
 document.body.style.margin = '0 px'
-
+document.body.style.overflow = 'hidden';
 
 
 const Canvas01 = (()=>{

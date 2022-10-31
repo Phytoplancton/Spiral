@@ -19,12 +19,8 @@ const MouseListener = (()=>{
         var deltaMiddleToMouseY = M.PosY-Settings.rootY
         var deltaMiddleToMouseX = M.PosX-Settings.rootX
         var currentAngle = mod(-Math.atan2(deltaMiddleToMouseY,deltaMiddleToMouseX),Math.PI*2)
-        for (var i = 0; i<100;i++){
-            var angelDiff = mod(M.angleToMouse-currentAngle+Math.PI,Math.PI*2)-Math.PI
-            var directionToAdjustAngleToMouse = -Math.sign(angelDiff)
-            M.angleToMouse += directionToAdjustAngleToMouse*0.005
-        }
-
+        var angelDiff = mod(M.angleToMouse-currentAngle + Math.PI, Math.PI*2) - Math.PI
+        M.angleToMouse -= angelDiff
     }) 
 
     return M
